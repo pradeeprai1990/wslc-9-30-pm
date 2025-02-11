@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let userNum = Number(prompt("Enter The value:--")) //10
+    let midValue= Math.ceil(userNum/2);   //37  -  18.5
+    let primeStatus = true;
+
+    if (userNum > 2) {
+        for (let i = 2; i < userNum; i++) {
+
+            if (userNum % i == 0) {
+
+                primeStatus = false;
+                break;
+            }
+
+        }
+    }
+
+
+
+
+
+
+    if (primeStatus) {
+        console.log(userNum, "Prime Number")
+    }
+    else {
+        console.log(userNum, "Not Prime Number")
+    }
+</script>
+
+</html>

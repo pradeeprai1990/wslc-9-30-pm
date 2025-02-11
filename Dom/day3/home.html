@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            font-family: sans-serif;
+            padding: 0px;
+        }
+        .activePara{
+            color: red;
+            font-size: 22px;
+            border: 1px solid red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+     <button id="add">Add</button>   
+     <button id="remove">Remove</button> 
+     <button id="toggle">Toggle</button>     
+
+     <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur voluptas sequi, doloremque dolor inventore ut nobis tempora dicta, harum, nisi impedit! Accusamus ipsa doloremque at quasi quae expedita saepe laboriosam!
+     </p>
+</body>
+
+<script>
+    let addBtn=document.querySelector("#add")
+
+    let removeBtn=document.querySelector("#remove")
+
+
+    let toggleBtn=document.querySelector("#toggle")
+
+    let paraElement=document.querySelector("p")
+
+    
+    addBtn.addEventListener("click",()=>{
+        paraElement.classList.add('activePara')   
+    })
+
+    removeBtn.addEventListener("click",()=>{
+        paraElement.classList.remove('activePara')
+    })
+
+    toggleBtn.addEventListener("click",()=>{
+        paraElement.classList.toggle('activePara')
+    })
+
+</script>
+</html>

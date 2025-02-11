@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    let arrayReverse=(arr)=>{
+        let newArray=[]
+        
+        arr.forEach((v)=>{
+            newArray.unshift(v)
+        })
+        return newArray;
+    }
+
+    let getlowValueinArray=(arr)=>{
+        let minValue=arr[0]
+        
+        arr.forEach((v)=>{
+            if(v<minValue){
+                minValue=v;
+            }
+        })
+
+        return minValue;
+    }
+
+
+
+
+    let l=[25,99,77,88,55,66,77,32,12,78]
+
+
+  console.log(getlowValueinArray(l))
+
+
+   let outPut= arrayReverse(l)
+   console.log(outPut)
+    // let myNewArray= l.reverse();
+
+    // console.log(myNewArray)
+
+
+    // l.unshift(20)
+
+    // console.log(l)
+</script>
+</html>

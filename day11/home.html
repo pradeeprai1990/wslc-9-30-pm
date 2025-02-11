@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let l=[10,20,30,40,50,99]
+
+    // l.forEach(  ( value,index )=>{
+    //      console.log(value,index)
+    // } )
+
+    // console.log("")
+
+
+    // l.forEach(function(value,index){
+    //     console.log(value,index)
+    // })
+    // console.log("")
+
+    // l.forEach((v,i)=> console.log(v,i) )
+
+    // //Map
+    // let m=[10,20,30,40]
+
+    // //Map New Array
+    // //Map results
+    
+    // console.log(m)
+    // let newArray=m.map((v,i)=> {
+    //     return  v+5 
+    // } )
+
+    // console.log(newArray)
+
+
+
+    // let l=[10,20,88,99,77,66]
+    // let m=[50,99,77,66,44,33]
+
+    // m.forEach((value)=>{
+    //     if(l.includes(value)){
+    //         console.log(value)
+    //     }
+    // })
+
+    // console.log( ! l.includes(50) )
+
+
+
+//     let checkFac=(num1)=>{
+//        let finalAns=1;
+//        for(let i=1;i<=num1;i++){
+//             finalAns=finalAns*i
+//        }
+
+//        return finalAns
+//     }
+
+
+
+//    console.log(checkFac(5))
+
+
+//    console.log(checkFac(6))
+
+
+//    console.log(checkFac(9))
+
+
+//    console.log(checkFac(10))
+
+
+//    console.log(checkFac(12))
+
+
+
+
+
+let createSquareofArrayValue=(arr)=>{
+
+    // let myNewArray=arr.map((v)=>v*v)
+    // return myNewArray
+
+    let newArray=[]
+    for(let v of arr){
+        newArray.push(v*v)
+    }
+    return newArray;
+    
+}
+
+
+let l=[10,20,30,40,99,77]
+let outPut= createSquareofArrayValue(l)
+console.log(outPut)
+
+
+</script>
+</html>

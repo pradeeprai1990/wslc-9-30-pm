@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=let, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let userNumber = Number(prompt("Enter a number: ")); //6
+
+    let tot=0;
+    for(let i=1;i<userNumber;i++){
+        if(userNumber%i==0){
+           
+            tot=tot+i;  
+        }
+    }
+
+
+    if(tot==userNumber){
+        document.write(userNumber," is a perfect number");
+    }
+    else{
+        document.write(userNumber," is not a perfect number");
+    }
+</script>
+</html>

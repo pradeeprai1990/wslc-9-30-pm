@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ModelOverlay">       
+    </div>  
+    <div class="lightBoxModal">
+        <span>&times;</span>
+        <img src="" alt="">
+    </div>  
+
+
+    <h1>Gallery</h1>
+    <div class="main">
+
+        <div class="gallerYItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg"/>
+        </div>
+        <div class="gallerYItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-08.jpg"/>
+        </div>
+        <div class="gallerYItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-10.jpg"/>
+        </div>
+        <div class="gallerYItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg"/>
+        </div>
+        <div class="gallerYItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-08.jpg"/>
+        </div>
+        <div class="gallerYItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-10.jpg"/>
+        </div>
+        <div class="gallerYItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg"/>
+        </div>
+        <div class="gallerYItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-08.jpg"/>
+        </div>
+        
+    </div>    
+</body>
+
+<script>
+    let mainElement=document.querySelector(".main")
+
+    let ModelOverlayElement=document.querySelector(".ModelOverlay")
+    let lightBoxModalElement=document.querySelector(".lightBoxModal")
+    let imgElement=document.querySelector(".lightBoxModal img")
+
+    mainElement.addEventListener("click", function(e){
+        let currentPath=e.target.src
+        if(currentPath!=undefined){
+            ModelOverlayElement.classList.add('ModelOverlayShow')
+            lightBoxModalElement.classList.add("lightBoxModalShow")
+            imgElement.src=currentPath
+        }
+    } )
+   
+    ModelOverlayElement.addEventListener("click",()=>{
+        ModelOverlayElement.classList.remove('ModelOverlayShow')
+        lightBoxModalElement.classList.remove("lightBoxModalShow")
+    })
+
+</script>
+
+</html>

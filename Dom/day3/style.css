@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+header{
+    box-shadow: 0px 0px 10px 2px #ccc;
+}
+.headerMid{
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    padding: 5px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerMid nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+.micon{
+    display: none;
+}

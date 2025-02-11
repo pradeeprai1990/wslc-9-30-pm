@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+    padding: 30px 0px;
+}
+.main{
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallerYItems{
+    flex-basis: 23%;
+    margin: 1%;
+}
+.gallerYItems img{
+    width: 100%;
+}
+
+
+.ModelOverlay{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.lightBoxModal{
+    width: 800px;
+    position: fixed;
+    left: 50%;
+
+    background-color: white;
+    top: 50%;
+    transition: 0.5s;
+
+    transform: translate(-50%,-50%) scale(0);
+}
+.lightBoxModal img{
+    width: 100%;
+    display: block;
+}
+
+.ModelOverlayShow{
+    display: block;
+}
+.lightBoxModalShow{
+    transform: translate(-50%,-50%) scale(1);
+}
+.lightBoxModal span{
+    font-size: 40px;
+    position: absolute;
+    right: 0px;
+}

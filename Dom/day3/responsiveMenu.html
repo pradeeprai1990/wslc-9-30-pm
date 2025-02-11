@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+</head>
+
+<body>
+    <header>
+        <div class="headerMid">
+            <figure>
+                <img width="150" src="https://www.wscubetech.com/images/wscube-tech-logo-2.svg" alt="">
+            </figure>
+            <nav >
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Course</a>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                    </li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-bars micon"></i>
+
+        </div>
+    </header>
+</body>
+
+<script>
+    let micon=document.querySelector(".micon")
+    let navElement=document.querySelector("nav")
+ 
+
+    micon.addEventListener("click",function(){
+       
+
+        navElement.classList.toggle("showMenu")
+        micon.classList.toggle("fa-bars") //Remove //add
+        micon.classList.toggle("fa-close") //Add //remove
+    })
+
+
+
+    // Math.floor(50.9) //50
+    // Math.ceil(60.2)  //61
+
+  
+</script>
+
+</html>

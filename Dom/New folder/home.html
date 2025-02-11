@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">  Welcome <u>to</u> <i> ws </i> </h1>
+
+    <div id="store"></div>
+
+</body>
+
+<script>
+    let headingElement=document.getElementById("heading")
+    let storeElement=document.getElementById("store")
+
+    // console.log(headingElement.innerHTML) //Welcome <u>to</u> ws
+    // console.log(headingElement.innerText) //Welcome to ws
+
+    storeElement.innerHTML=headingElement.innerText //Welcome to ws
+</script>
+</html>
