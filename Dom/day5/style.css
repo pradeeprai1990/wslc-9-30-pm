@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.faqInner{
+    max-width: 1320px;
+    margin: auto;
+}
+
+.faqItems{
+    border: 1px solid #ccc;
+    margin: 10px 0px;
+}
+
+.faqItems h3{
+    padding: 10px;
+    background-color: purple;
+    color: white;
+}
+.faqItems p{
+    font-size: 18px;
+    padding: 10px;
+    display: none;
+    line-height: 30px;
+}
+
+.Showpara{
+    display: block !important;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Frequently Asked Questions
+    </h1>
+
+    <div class="faqInner">
+        <div class="faqItems">
+            <h3>How do I book a taxi with GI Express Taxi?</h3>
+            <p>You can book a taxi online through our easy-to-use booking system or call us directly. We ensure quick and hassle-free You can book a taxi online through our easy-to-use booking system or call us directly. We ensure quick and hassle-free bookings for all customers.</p>
+        </div>
+        <div class="faqItems">
+            <h3>What areas do you serve?</h3>
+            <p>You can book a taxi online through our easy-to-use booking system or call us directly. We ensure quick and   can book a taxi online through our easy-to-use booking system or call us directly. We ensure quick and hassle-free bookings for all custo</p>
+        </div>
+        <div class="faqItems">
+            <h3>Can I pre-book a cab in Leicester city?</h3>
+            <p>Absolutely! We recommend pre-booking your cab to ensure availability, especially during peak hours or for early morning transfers.</p>
+        </div>
+        <div class="faqItems">
+            <h3>How can I track my taxi?   </h3>
+            <p>Our taxis in Leicester city are equipped with GPS tracking, allowing you to monitor your ride in real-time for added safety and convenience.</p>
+        </div>
+    </div>
+</body>
+<script>
+    let allQuestion=document.querySelectorAll(".faqItems h3")
+    
+    allQuestion.forEach((h3Element,index)=>{
+        h3Element.addEventListener("click",()=>{
+            h3Element.nextElementSibling.classList.toggle('Showpara')
+        })
+    })
+</script>
+</html>
