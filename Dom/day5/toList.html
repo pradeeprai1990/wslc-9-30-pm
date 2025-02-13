@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+            padding: 0px;
+        }
+        .main{
+            width: 1170px;
+            margin: auto;
+        }
+        .main textarea{
+            width: 100%;
+            padding: 20px;
+            height: 200px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <textarea ></textarea>
+
+        <div>Length: <span></span> </div>
+        <div id="res"></div>
+    </div>
+</body>
+<script>
+    let textareaElement=document.querySelector("textarea")
+    let resElement=document.querySelector("#res")
+
+    let mainSpanElement=document.querySelector(".main span")
+    textareaElement.addEventListener("keyup",(event)=>{
+       let txtValue=event.target.value //Welcome
+       
+       resElement.innerHTML=txtValue
+       mainSpanElement.innerHTML=txtValue.length
+
+       // console.log(textareaElement.value)
+    })
+</script>
+</html>

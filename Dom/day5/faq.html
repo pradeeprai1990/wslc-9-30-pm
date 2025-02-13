@@ -12,19 +12,19 @@
 
     <div class="faqInner">
         <div class="faqItems">
-            <h3>How do I book a taxi with GI Express Taxi?</h3>
+            <h3>How do I book a taxi with GI Express <b> Taxi? </b>    <span>+</span>  </h3>
             <p>You can book a taxi online through our easy-to-use booking system or call us directly. We ensure quick and hassle-free You can book a taxi online through our easy-to-use booking system or call us directly. We ensure quick and hassle-free bookings for all customers.</p>
         </div>
         <div class="faqItems">
-            <h3>What areas do you serve?</h3>
+            <h3>What areas do you serve?  <span>+</span>  </h3>
             <p>You can book a taxi online through our easy-to-use booking system or call us directly. We ensure quick and   can book a taxi online through our easy-to-use booking system or call us directly. We ensure quick and hassle-free bookings for all custo</p>
         </div>
         <div class="faqItems">
-            <h3>Can I pre-book a cab in Leicester city?</h3>
+            <h3>Can I pre-book a cab in Leicester city?  <span>+</span>  </h3>
             <p>Absolutely! We recommend pre-booking your cab to ensure availability, especially during peak hours or for early morning transfers.</p>
         </div>
         <div class="faqItems">
-            <h3>How can I track my taxi?   </h3>
+            <h3>How can I track my taxi?     <span>+</span>  </h3>
             <p>Our taxis in Leicester city are equipped with GPS tracking, allowing you to monitor your ride in real-time for added safety and convenience.</p>
         </div>
     </div>
@@ -34,6 +34,29 @@
     
     allQuestion.forEach((h3Element,index)=>{
         h3Element.addEventListener("click",()=>{
+
+            //Current Question Logic
+
+
+
+
+            allQuestion.forEach((heading,i)=>{
+                if(index!=i){
+                    heading.lastElementChild.innerHTML="+"
+                    heading.nextElementSibling.classList.remove('Showpara')
+                }
+                
+            })
+
+
+
+
+            if(h3Element.lastElementChild.innerHTML=="+"){
+                
+                h3Element.lastElementChild.innerHTML="-"
+            }else{
+                h3Element.lastElementChild.innerHTML="+"
+            }
             h3Element.nextElementSibling.classList.toggle('Showpara')
         })
     })
