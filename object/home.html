@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 1000px;
+            font-family: sans-serif;
+            margin: auto;
+        }
+        table tr td,table tr th{
+            text-align: center;
+            padding: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th> Name </th>
+                <th>Uemail</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+
+</body>
+<script>
+    // let obj={
+    //     uname:"Pradeep",
+    //     uemail:"pradeep@gmail.com",
+    //     uphone:88888888
+    // }
+
+    // let {uname,uemail}=obj
+
+    // console.log(uname,uemail)
+
+
+    // console.log(obj['uname'])//Pradeep
+    // // for(let k in obj){
+    // //     console.log(k,obj[k])
+    // // }
+
+    // console.log(obj['uname'])
+    // console.log(obj.uname)
+
+    // <tr>
+    //             <td>1</td>
+    //             <td>Pradeep</td>
+    //             <td>p@gmail.com</td>
+    //             <td>2234234</td>
+    //         </tr>
+
+    let tbodyElement=document.querySelector("table tbody")    
+
+    let user=[
+        {
+            uname:"Pradeep",
+            uemail:"pradeep@gmail.com",
+            uphone:888999999
+        },
+        {
+            uname:"Ravi",
+            uemail:"ravi@gmail.com",
+            uphone:4545645645
+        },
+        {
+            uname:"price",
+            uemail:"hello@gmail.com",
+            uphone:34345345
+        },
+        {
+            uname:"raj",
+            uemail:"raj@gmail.com",
+            uphone:34345345
+        },
+        {
+            uname:"sandeep",
+            uemail:"sandeep@gmail.com",
+            uphone:34345345
+        }
+    ]
+     
+    let Items=''
+
+    user.forEach((data,index)=>{
+
+        let {uname,uemail,uphone}=data
+
+        Items+=`<tr>
+                    <td>${index+1}</td>
+                    <td>${uname}</td>
+                    <td>${uemail}</td>
+                    <td>${uphone}</td>
+                </tr>`
+
+        console.log(index,data)
+    })
+
+    tbodyElement.innerHTML=Items
+    // console.log(Items)
+
+
+    // let b='<b>hello</b>'
+
+    // b+='<b>ws</b>'
+
+    // b+='<b>IIP</b>'
+
+    // console.log(b)
+
+    let l=[10,20,30,40,50]
+
+    let [a,b,...c]=l
+    console.log(a,b)
+    console.log(c) //[30,40,50]
+
+
+
+</script>
+</html>

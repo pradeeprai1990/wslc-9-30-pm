@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+        <h1></h1>
+</body>
+<script>
+
+  let h1Element=document.querySelector("h1")
+  let digitalClock=()=>{
+    let currentDate=new Date()
+
+    let currentHours= currentDate.getHours()   
+    let currentMins= currentDate.getMinutes()<10 ? "0"+currentDate.getMinutes() : currentDate.getMinutes()
+    let getSeconds= currentDate.getSeconds() <10 ? "0"+currentDate.getSeconds() : currentDate.getSeconds()
+                
+    let getType= currentHours>=12 ? "PM" : "AM"
+
+    let finalHour=currentHours>=12 ? currentHours-12 : currentHours
+
+    let finalHourWithZero=  finalHour<10 ? "0"+finalHour : finalHour
+
+    let finalAns=`${finalHourWithZero} :${currentMins} : ${getSeconds} ${getType} `
+
+    h1Element.innerHTML=finalAns;
+  }  
+   
+  digitalClock() //First Time
+
+
+  setInterval(digitalClock,1000)
+
+  let showModal=()=>{
+   
+  }
+
+  setTimeout(showModal,2000)
+    
+</script>
+</html>

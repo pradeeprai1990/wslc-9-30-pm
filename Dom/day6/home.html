@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: sans-serif;
+        }
+        h1{
+            font-size: 30px;
+            padding: 30px 0px;  
+            text-align: center;
+        }
+        form{
+            max-width: 700px;
+            display: flex;
+            margin: auto;
+        }
+        form input{
+            height: 30px;
+            padding-left: 15px;
+            flex-basis: 80%;
+        }
+        form button{
+            flex-basis: 20%;
+        }
+        .outer{
+            width: 700px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .outer ul li{
+            color: white;
+            padding: 10px;
+            position: relative;
+            margin-top: 10px;
+            background-color: purple;
+        }
+        .outer ul li span{
+            position: absolute;
+            cursor: pointer;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h1>ToDO List</h1>
+        <form action="">
+            <input type="text"  name="userInput">
+            <button>Save</button>
+        </form>
+
+        <div class="outer">
+            <ul>
+               
+            </ul>
+        </div>
+</body>
+<script>
+    let formElement=document.querySelector("form")
+    let userToDo=[]
+ 
+
+
+    formElement.addEventListener("submit",(event)=>{
+       
+        event.preventDefault(); 
+
+         let userValue=event.target.userInput.value //HTML Video
+        
+         userToDo.push(userValue) //Add //["HTML Video"]
+
+
+
+
+
+         showAllList()
+
+         event.target.reset(); //Reset
+         
+         
+
+        // 
+        
+    })
+
+
+
+
+    let outerUlElement=document.querySelector(".outer ul")
+    let showAllList=()=>{
+
+        let myItems=''
+        if(userToDo.length>=1){ //False
+            userToDo.forEach((value,index)=>{
+            myItems+=`<li> ${value} <span onclick="deleteTodo(${index})">&times;</span> </li>`
+            })
+            outerUlElement.innerHTML=myItems
+            
+        }
+        else{
+            outerUlElement.innerHTML="<li>No Data Found</li>"
+        }
+       
+        
+       
+    }
+
+
+    let deleteTodo=(currentIndex)=>{
+        userToDo.splice(currentIndex,1)
+        showAllList()
+    }
+
+    showAllList()
+
+    // let user=["ram","ravi","raj"]
+
+    // user.splice(1,2)
+
+    // console.log(user)
+</script>
+</html>
