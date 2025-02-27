@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .countDownouter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .countDownouterItems{
+            margin: 0px 10px;
+            padding: 30px;
+            background-color: #f1f1f1;
+            box-shadow: 0px 0px 10px 0px #000;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+        
+    <h1>Countdown Timer</h1>
+    
+    <div class="countDownouter">
+       
+            <div class="countDownouterItems">
+                <h2>0</h2>
+                <p>Days</p>
+            </div>
+            <div class="countDownouterItems">
+                <h2>0</h2>
+                <p>Hours</p>
+            </div>
+            <div class="countDownouterItems">
+                <h2>0</h2>
+                <p>Min</p>
+            </div>
+            <div class="countDownouterItems">
+                <h2>0</h2>
+                <p>Sec</p>
+            </div>
+        
+    </div>
+
+   
+</body>
+<script>
+
+    let allH2=document.querySelectorAll('h2')
+    let countDown = () => {
+        let currentDate = new Date();
+
+        let currentDateMs = currentDate.getTime(); //Current date in ms
+
+
+
+
+        let fDate = new Date("Tue March 1 2025 23:59:59 GMT+0530 (India Standard Time)")
+
+        let fDateMs = fDate.getTime() //Future date in ms
+
+
+        let diffMS = fDateMs - currentDateMs //Difference in ms
+
+        let finalSecond = Math.floor(diffMS / 1000) //Difference in second
+
+
+        console.log(finalSecond)
+
+        let oneMin = 60
+        let oneHour = oneMin * 60; //3600
+        let oneday = oneHour * 24; //86400
+
+        let finalDays = Math.floor(finalSecond / oneday)
+
+        let remSecondAfterDays = finalSecond % oneday
+
+        let finalHours = Math.floor(remSecondAfterDays / oneHour)
+
+        let remSecondAfterHours = remSecondAfterDays % oneHour
+        let finalMin = Math.floor(remSecondAfterHours / oneMin)
+
+        let remSecondAfterMin = remSecondAfterHours % oneMin;
+
+        let finalAns=[finalDays, finalHours, finalMin, remSecondAfterMin]
+        // allH2[0].innerHTML=finalDays>10 ? finalDays :`0${finalDays}`
+        // allH2[1].innerHTML=finalHours>10 ? finalHours :`0${finalHours}`
+        // allH2[2].innerHTML=finalMin>10 ? finalMin :`0${finalMin}`
+        // allH2[3].innerHTML=remSecondAfterMin>10 ? remSecondAfterMin :`0${remSecondAfterMin}` 
+      
+        allH2.forEach((item, index)=>{
+           item.innerHTML=finalAns[index]>10 ? finalAns[index] :`0${finalAns[index]}` 
+        })
+
+    }
+
+    // <h2>0</h2> . innerHTML= finalAns[0]
+
+
+    countDown()
+    setInterval(countDown, 1000)
+
+</script>
+
+</html>

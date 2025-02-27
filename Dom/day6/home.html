@@ -73,16 +73,16 @@
         event.preventDefault(); 
 
          let userValue=event.target.userInput.value //HTML Video
+         if(userValue==""){
+             alert("Please Enter Value")
+             return
+         }
+         
+            userToDo.push(userValue) //Add //["HTML Video"
+            showAllList()
+            event.target.reset(); //Reset
+         
         
-         userToDo.push(userValue) //Add //["HTML Video"]
-
-
-
-
-
-         showAllList()
-
-         event.target.reset(); //Reset
          
          
 

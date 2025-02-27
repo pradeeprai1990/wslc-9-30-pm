@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    let myPromise=new Promise((mySuccess,myReject)=>{
+       let status=1
+       if(status==1){
+         mySuccess(
+            {status:1,message:"Promise is resolved"}
+        );
+       }
+       if(status==2){
+        myReject(
+                {status:0,message:"Promise is rejected"}
+            );
+       }
+    });
+
+    let getMyData=()=>{
+
+        myPromise.then((successRes)=>{
+            console.log(successRes);
+            
+        }).catch((error)=>{
+            console.log(error);
+        })
+    }
+
+    getMyData()
+    
+    // let getMydata=async ()=>{
+    //     try{
+    //         let data=await myPromise; // Reseolve
+    //         console.log(data.message);
+    //         console.log(data.status) 
+    //     }
+    //     catch(err){
+    //         console.log(err)
+    //         console.log(err.message);
+    //         console.log(err.status) 
+    //     }
+        
+    // }
+    
+    // getMydata()
+
+    // let getMyProduct=()=>{
+    //     fetch('https://dummyjson.com/products')
+    //     .then((response)=>{
+           
+    //     })
+    // }
+
+    // getMyProduct()
+
+</script>
+</html>
