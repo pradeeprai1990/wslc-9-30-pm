@@ -1,0 +1,38 @@
+
+header{
+    background-color: #101828;
+}
+
+header ul li{
+    margin-right: 20px;
+}
+.bannerSection{
+    background: linear-gradient(261.99deg, #ffe3dd 2.82%, #fff8da 17.1%, rgba(255, 249, 221, 0) 31.78%, hsla(0, 100%, 90%, .04) 50.27%, rgba(255, 249, 221, .35) 67.28%, #ffeee9 77.89%, rgba(255, 238, 233, .14) 91.09%);
+}
+
+
+#bannerSlider .carousel-indicators [data-bs-target]{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+#bannerSlider .carousel-indicators .active{
+    background-color: red;
+}
+
+
+
+.bannerSection form{
+    background-color: #101828;
+}
+
+
+#teamSlider  .owl-dot span{
+    width: 40px ;
+    height: 10px;
+} 
+
+#teamSlider  .active span{
+    background-color: red;
+}

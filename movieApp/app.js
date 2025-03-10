@@ -48,7 +48,6 @@ getMovies() // should
 
 //Search Functionality
 let inputElement = document.querySelector('input')
-
 inputElement.addEventListener("keyup",()=>{
     getMovies(inputElement.value)
 })
